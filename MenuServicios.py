@@ -119,4 +119,28 @@ def ActualizarServicio():
             print("\n>>> Error: Selección inválida.")
 
 def EliminarServicio():
-    pass
+    datos = leer_json('ListaServicios.json')
+    if not datos:
+        print("No hay nada que eliminar.")
+        return
+    print("\n" + "="*40)
+    print("      ELIMINAR UN SERVICIO")
+    print("="*40)
+    for i, item in enumerate(datos):
+        print(f"{i + 1}. {item.get('Servicio', 'Sin nombre')}")
+    print("0. Volver")
+    try:
+        sel = int(input("\nNúmero del servicio a eliminar: "))
+        if sel == 0: return
+        indice = sel - 1
+        borrado = datos.pop(indice)
+        confirmar = input(f"¿Eliminar '{borrado['Servicio']}'? (s/n): ").lower()
+        if confirmar == 's':
+            escribir_json('ListaServicios.json', datos)
+            print("Eliminado con éxito.")
+        else:
+            print("Operación cancelada.")
+    except:
+        print("Error en la selección.")
+
+MenuServicios()

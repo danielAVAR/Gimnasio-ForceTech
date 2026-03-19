@@ -30,7 +30,22 @@ def MenuServicios():
             print("\nError: Ingrese solo números.")
 
 def VisualizarServicio():
-    pass
+    print("\n" + "="*115)
+    print("                              ---Listado de Servicios Existentes---")
+    print("="*115)
+    print(f"{'SERVICIO':<27} | {'Instructor/a':<12} | {'Duración':<14} | {'Capacidad Máx':<15} | {'Inscritos':<10}")
+    print("-" * 115)
+    contenido = leer_json('ListaServicios.json')
+    if not contenido:
+        print("No hay servicios registrados.")
+    else: 
+        for item in contenido:
+            nom = item.get('Servicio', 'N/A')
+            inst = item.get('Instructor/a', 'N/A')
+            dur = item.get('Duración (min)', item.get('Duración', 'N/A'))
+            cap = item.get('Capacidad máx(personas)', item.get('Capacidadmáx(personas)', 'N/A'))
+            ins = item.get('Usuarios Inscritos', item.get('UsuariosInscritos', 0))
+            print(f"{str(nom):<27} | {str(inst):<12} | {str(dur):<14} | {str(cap):<15} | {str(ins):<10}")
 
 def AñadirServicio():
     pass

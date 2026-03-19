@@ -1,0 +1,37 @@
+[
+    {
+        "Servicio": "Clases de Yoga",
+        "Instructor/a": "Jaime Caal",
+        "Duración (meses)": 6,
+        "Capacidad máx(personas)": 30,
+        "Usuarios Inscritos": 20
+    },
+    {
+        "Servicio": "Clases de Pilates",
+        "Instructor/a": "Valentina López",
+        "Duración (meses)": 6,
+        "Capacidad máx(personas)": 25,
+        "Usuarios Inscritos": 17
+    },
+    {
+        "Servicio": "Entrenamiento personalizado",
+        "Instructor/a": "Carlos Hernández",
+        "Duración (meses)": 4,
+        "Capacidad máx(personas)": 5,
+        "Usuarios Inscritos": 4
+    },
+    {
+        "Servicio": "Acceso a la Piscina",
+        "Instructor/a": "Noé Agilar",
+        "Duración (meses)": 12,
+        "Capacidad máx(personas)": 20,
+        "Usuarios Inscritos": 15
+    },
+    {
+        "Servicio": "Uso General del GYM",
+        "Instructor/a": "Gerson Pérez",
+        "Duración (meses)": 12,
+        "Capacidad máx(personas)": 150,
+        "Usuarios Inscritos":65
+    }
+]

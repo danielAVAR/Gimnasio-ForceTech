@@ -68,7 +68,55 @@ def AñadirServicio():
     print("\n¡Servicio Guardado!")
 
 def ActualizarServicio():
-    pass
+    archivo = 'ListaServicios.json'
+    datos = leer_json(archivo)
+    if not datos:
+        print("\nNo hay servicios para editar.")
+        return
+    while True:
+        print("\n" + "="*40)
+        print("       ACTUALIZAR SERVICIO")
+        print("="*40)
+        for i, item in enumerate(datos):
+            print(f"{i + 1}. {item.get('Servicio', 'Sin nombre')}")
+        print("0. Volver al menú principal")
+        try:
+            seleccion = int(input("\nSeleccione el número del servicio: "))
+            if seleccion == 0: break
+            indice = seleccion - 1
+            servicio = datos[indice] 
+            print(f"\n--- Editando: {servicio['Servicio']} ---")
+            print("1. Nombre del Servicio")
+            print("2. Instructor/a")
+            print("3. Duración")
+            print("4. Capacidad Máxima")
+            print("5. Usuarios Inscritos")
+            print("6. Cancelar")
+            opcion = int(input("\n¿Qué campo desea editar?: "))
+            if opcion == 6: continue
+            if opcion == 1:
+                nuevo = input(f"Nuevo Nombre [{servicio['Servicio']}]: ").strip()
+                if nuevo: servicio['Servicio'] = nuevo
+            elif opcion == 2:
+                nuevo = input(f"Nuevo Instructor [{servicio.get('Instructor/a', 'N/A')}]: ").strip()
+                if nuevo: servicio['Instructor/a'] = nuevo
+            elif opcion == 3:
+                key = 'Duración (meses)' if 'Duración (datos)' in servicio else 'Duración'
+                val = input(f"Nueva Duración [{servicio.get(key, 0)}]: ").strip()
+                if val: servicio[key] = int(val)
+            elif opcion == 4:
+                key = 'Capacidad máx(personas)' if 'Capacidad máx(personas)' in servicio else 'Capacidadmáx(personas)'
+                val = input(f"Nueva Capacidad [{servicio.get(key, 0)}]: ").strip()
+                if val: servicio[key] = int(val)
+            elif opcion == 5:
+                key = 'Usuarios Inscritos' if 'Usuarios Inscritos' in servicio else 'UsuariosInscritos'
+                val = input(f"Nuevos Inscritos [{servicio.get(key, 0)}]: ").strip()
+                if val: servicio[key] = int(val)
+            escribir_json(archivo, datos)
+            print("\n¡Cambio guardado con éxito!")
+            break 
+        except (ValueError, IndexError):
+            print("\n>>> Error: Selección inválida.")
 
 def EliminarServicio():
     pass

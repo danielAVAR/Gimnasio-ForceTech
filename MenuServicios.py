@@ -42,13 +42,30 @@ def VisualizarServicio():
         for item in contenido:
             nom = item.get('Servicio', 'N/A')
             inst = item.get('Instructor/a', 'N/A')
-            dur = item.get('Duración (min)', item.get('Duración', 'N/A'))
+            dur = item.get('Duración (meses)', item.get('Duración', 'N/A'))
             cap = item.get('Capacidad máx(personas)', item.get('Capacidadmáx(personas)', 'N/A'))
             ins = item.get('Usuarios Inscritos', item.get('UsuariosInscritos', 0))
             print(f"{str(nom):<27} | {str(inst):<12} | {str(dur):<14} | {str(cap):<15} | {str(ins):<10}")
 
 def AñadirServicio():
-    pass
+    print("\n" + "="*50)
+    print("       ---Añadiendo Servicio Nuevo---")
+    print("="*50)
+    contenido = leer_json('ListaServicios.json')
+    nuevo_nom = input("Nombre del Nuevo Servicio: ").strip()
+    if any(s.get('Servicio', '').lower() == nuevo_nom.lower() for s in contenido):
+        print(f"Error: El Servicio '{nuevo_nom}' ya existe.")
+        return
+    nuevo_item = {
+        "Servicio": nuevo_nom,
+        "Instructor/a": input("Nombre del instructor/a: "),
+        "Duración (meses)": int(input("Duración (meses): ")),
+        "Capacidad máx(personas)": int(input("Capacidad máxima: ")),
+        "Usuarios Inscritos": 0 
+    }
+    contenido.append(nuevo_item)
+    escribir_json("ListaServicios.json", contenido)
+    print("\n¡Servicio Guardado!")
 
 def ActualizarServicio():
     pass

@@ -19,7 +19,7 @@ def MenuPrincipal():
             elif opc == 2:
                 MenuServicios()
             elif opc == 3:
-                generar_reporte("datos.json")
+                menu_reporte_cleintes()
             elif opc == 4:
                 print("\nSaliendo...")
                 break

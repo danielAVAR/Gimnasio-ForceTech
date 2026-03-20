@@ -17,7 +17,10 @@ def menu_reporte_cleintes():
           """)
 def ver_progreso():
     print("bienvenido al reporte del progreso")
+<<<<<<< HEAD
     import json
+=======
+>>>>>>> reportes
 
 def generar_reporte(datos_json):
     with open(datos_json, 'r') as f:

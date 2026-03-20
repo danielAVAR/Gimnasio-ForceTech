@@ -1,3 +1,4 @@
+import json
 ####################################################################################################
 def separador():
     print(" "*60)
@@ -16,7 +17,6 @@ def menu_reporte_cleintes():
           """)
 def ver_progreso():
     print("bienvenido al reporte del progreso")
-    import json
 
 def generar_reporte(datos_json):
     with open(datos_json, 'r') as f:
@@ -31,8 +31,7 @@ def generar_reporte(datos_json):
     generar_reporte(datos_json)
 
     for i in datos,json:
-        prnit("progreso general")
-        print("
+        print("progreso general")
     print ("progreso en espera")
 def ver_asistencia():
     print ("checando asistencia")

@@ -1,5 +1,6 @@
 from MenuRegistro import *
 from MenuServicios import *
+from funciones import *
 
 def MenuPrincipal():
     while True:
@@ -8,7 +9,8 @@ def MenuPrincipal():
         print("="*45)
         print("1. Registrar Nuevo Usuario")
         print("2. Gestionar Servicios")
-        print("3. Salir")
+        print("3. Reportes")
+        print("4. Salir")
         try:
             print("-"*45)
             opc = int(input("Seleccione una Opción: "))
@@ -17,6 +19,8 @@ def MenuPrincipal():
             elif opc == 2:
                 MenuServicios()
             elif opc == 3:
+                generar_reporte("datos.json")
+            elif opc == 4:
                 print("\nSaliendo...")
                 break
             else:

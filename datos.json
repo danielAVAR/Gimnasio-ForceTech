@@ -1,14 +1,11 @@
 {
     "nombres": "",
     "apellidos": "",
-    "edad": "edad",
+    "Edad": "",
     "dpi": "",
-    "dirección": "dirección",
+    "Ubicación": "",
     "numero_personal": "",
     "numero_casa": "",
-    "estado": "estado",
-    "riegos": "",
-    "Edad": "",
-    "Ubicación": "",
-    "Estado de cuenta": ""
+    "Estado de cuenta": "",
+    "riegos": ""
 }

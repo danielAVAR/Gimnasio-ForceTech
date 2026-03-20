@@ -30,7 +30,7 @@ y que servirá como parte de su evaluación de conocimientos por parte de su ins
    
 #
 #### ✔️ INFORMACIÓN Y DETALLES DEL PROYECTO
-- 
+- [Presentación del Proyecto](https://www.canva.com/design/DAHET45ESHE/6gw8B65jT0ktaOYjAPUKtg/edit)
 
 ## Autores ✒️
 He aquí los responsables de que este proyecto se haya podido llevar a cabo:

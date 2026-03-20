@@ -1,11 +1,11 @@
 {
-    "nombres": "",
-    "apellidos": "",
-    "Edad": "",
-    "dpi": "",
-    "Ubicación": "",
-    "numero_personal": "",
-    "numero_casa": "",
-    "Estado de cuenta": "",
-    "riegos": ""
+    "nombres": "Ana",
+    "apellidos": "llll",
+    "Edad": "22",
+    "dpi": "165413651",
+    "Ubicación": "zona 4",
+    "numero_personal": "463465",
+    "numero_casa": "8",
+    "Estado de cuenta": "Activo",
+    "riegos": "bajo"
 }
